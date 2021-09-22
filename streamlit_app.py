@@ -6,7 +6,7 @@ d = {'id': ['a', 'b', 'c'], 'data': [3, 4,6]}
 df = pd.DataFrame(data=d)
 
 @st.cache(suppress_st_warning=True)
-def run_calc():
+def run_calc(a, data):
     df['result'] = df['data'] + a 
     st.write(df)
     st.write("gets run")
@@ -17,7 +17,7 @@ with st.sidebar.form("my_form"):
     calculate = st.form_submit_button('Calculate') 
 
 if calculate:
-    run_calc()
+    run_calc(a, data)
 
     #no issues up to this point. When I move the slider in 10 the output in 16 stays on the web page
 
