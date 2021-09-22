@@ -9,7 +9,8 @@ df = pd.DataFrame(data=d)
 with st.sidebar.form("my_form"):
     a = st.slider('sidebar for testing', 5, 10, 9)
     calculate = st.form_submit_button('Calculate') 
-if calculate
+
+if calculate:
     run_calc()
 
 @st.cache()
