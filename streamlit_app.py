@@ -5,6 +5,11 @@ import pandas as pd
 d = {'id': ['a', 'b', 'c'], 'data': [3, 4,6]}
 df = pd.DataFrame(data=d)
 
+@st.cache()
+def run_calc():
+    df['result'] = df['data'] + a 
+    st.write(df)
+
 #create sidebar input
 with st.sidebar.form("my_form"):
     a = st.slider('sidebar for testing', 5, 10, 9)
@@ -13,10 +18,6 @@ with st.sidebar.form("my_form"):
 if calculate:
     run_calc()
 
-@st.cache()
-def run_calc():
-    df['result'] = df['data'] + a 
-    st.write(df)
     #no issues up to this point. When I move the slider in 10 the output in 16 stays on the web page
 
     ########debug############
