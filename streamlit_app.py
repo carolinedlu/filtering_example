@@ -19,6 +19,7 @@ if calculate:
     ########debug############
     # I am trying to select an 'id' from the dropdown and use that to filter df, but when I select a value from the dropdown, 
     # the script runs again and the output disappears
+    
 with st.sidebar.form("filter_form")
     filter = st.selectbox('filter data', df['id'].unique())
     filter = st.form_submit_button('Filter')
