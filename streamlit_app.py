@@ -9,6 +9,7 @@ df = pd.DataFrame(data=d)
 def run_calc():
     df['result'] = df['data'] + a 
     st.write(df)
+    st.write("gets run")
 
 #create sidebar input
 with st.sidebar.form("my_form"):
