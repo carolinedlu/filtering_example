@@ -5,7 +5,7 @@ import pandas as pd
 d = {'id': ['a', 'b', 'c'], 'data': [3, 4,6]}
 df = pd.DataFrame(data=d)
 
-@st.cache()
+@st.cache(suppress_st_warning=True)
 def run_calc():
     df['result'] = df['data'] + a 
     st.write(df)
